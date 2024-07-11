@@ -1,7 +1,6 @@
 import './auth.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-// import { useState } from 'react';
+import PropTypes from 'prop-types';
 import Input from '../../components/general/Input';
 import Button from '../../components/general/Button';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
@@ -22,5 +21,12 @@ const Login = ({ username, password, setUsername, setPassword }) => {
         </div>
     );
 }
+
+Login.propTypes = {
+    username: PropTypes.string,
+    password: PropTypes.string,
+    setUsername: PropTypes.func,
+    setPassword: PropTypes.func,
+};
 
 export default Login;

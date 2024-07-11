@@ -4,6 +4,7 @@ import Button from '../../components/general/Button.js';
 import Login from './Login.js';
 import Register from './Register.js';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 const Authentication = ({ setUserUsername, setIsLoggedIn }) => {
     const [_switch, set_Switch] = useState(true);
@@ -61,4 +62,9 @@ const Authentication = ({ setUserUsername, setIsLoggedIn }) => {
     );
 }
 
+Authentication.propTypes = {
+    setIsLoggedIn: PropTypes.func.isRequired,
+    setUserUsername: PropTypes.func.isRequired
+  }
+  
 export default Authentication;

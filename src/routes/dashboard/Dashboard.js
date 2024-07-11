@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './HomePage';
 import Favorites from './Favorites';
 import WatchLater from './WatchLater';
+import PropTypes from 'prop-types';
 
 const Dashboard = ({ userUsername, setIsLoggedIn }) => {
     return (
@@ -25,5 +26,10 @@ const Dashboard = ({ userUsername, setIsLoggedIn }) => {
         </BrowserRouter>
     )
 }
+
+Dashboard.propTypes = {
+    userUsername: PropTypes.string.isRequired,
+    setIsLoggedIn: PropTypes.func.isRequired
+  }
 
 export default Dashboard;

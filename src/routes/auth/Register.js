@@ -1,7 +1,6 @@
 import './auth.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 import React from 'react';
-// import { useState } from 'react';
 import Input from '../../components/general/Input';
 import Button from '../../components/general/Button';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
@@ -23,5 +22,13 @@ const Register = ({ username, password, setUsername, setPassword }) => {
         </div>
     );
 }
+
+Register.propTypes = {
+    username: PropTypes.string,
+    password: PropTypes.string,
+    setUsername: PropTypes.func,
+    setPassword: PropTypes.func,
+};
+
 
 export default Register;
