@@ -15,7 +15,7 @@ const SearchBar = ({ title, setTitle }) => {
     );
 }
 
-SearchBar.PropTypes = {
+SearchBar.propTypes = {
     title: PropTypes.string.isRequired,
     setTitle: PropTypes.func.isRequired,
     icon: PropTypes.element
