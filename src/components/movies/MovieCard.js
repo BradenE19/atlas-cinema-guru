@@ -4,6 +4,8 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faClock } from '@fortawesome/free-solid-svg-icons';
 import backupImg from '../../assets/backup.png';
+import PropTypes from 'prop-types';
+
 
 const MovieCard = ({ movie }) => {
     const [isFavorite, setIsFavorite] = useState(false);
@@ -79,6 +81,10 @@ const MovieCard = ({ movie }) => {
             </div>
         </li>
     )
-};
+}
+
+MovieCard.propTypes = {
+    movie: PropTypes.object.isRequired
+  }
 
 export default MovieCard;

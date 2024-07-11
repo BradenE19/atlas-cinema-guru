@@ -1,5 +1,6 @@
 import React from 'react';
 import './general.css';
+import PropTypes from 'prop-types';
 
 const SelectInput = ({ label, options, className, value, setValue }) => {
     const handleSelect = (event) => {
@@ -16,5 +17,13 @@ const SelectInput = ({ label, options, className, value, setValue }) => {
         </div>
     );
 }
+
+SelectInput.propTypes = {
+    label: PropTypes.string.isRequired,
+    options: PropTypes.array.isRequired,
+    className: PropTypes.string.isRequired,
+    value: PropTypes.any.isRequired,
+    setValue: PropTypes.func.isRequired,
+  }
 
 export default SelectInput;

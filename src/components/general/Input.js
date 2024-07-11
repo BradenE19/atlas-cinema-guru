@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './general.css';
+import PropTypes from 'prop-types';
 
 const Input = ({ label, type, className, value, setValue, icon, inputAttributes }) => {
     const id = `${label.replace(/\s+/g, '')}`
@@ -17,5 +18,15 @@ const Input = ({ label, type, className, value, setValue, icon, inputAttributes 
         </div>
     );
 }
+
+Input.propTypes = {
+    label: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired,
+    value: PropTypes.any.isRequired,
+    setValue: PropTypes.func.isRequired,
+    icon: PropTypes.element,
+    inputAttributes: PropTypes.object
+  }
 
 export default Input;

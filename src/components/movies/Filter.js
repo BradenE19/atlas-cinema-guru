@@ -1,5 +1,6 @@
 import './movies.css';
 import SearchBar from '../general/SearchBar';
+import PropTypes from 'prop-types';
 import Input from '../general/Input';
 import SelectInput from '../general/SelectInput';
 import Tag from './Tag';
@@ -36,5 +37,19 @@ const Filter = ({ minYear, setMinYear, maxYear, setMaxYear, sort, setSort, genre
         </div>
     )
 }
+
+Filter.propTypes = {
+    minYear: PropTypes.number.isRequired,
+    setMinYear: PropTypes.func.isRequired,
+    maxYear: PropTypes.number.isRequired,
+    setMaxYear: PropTypes.func.isRequired,
+    sort: PropTypes.string.isRequired,
+    setSort: PropTypes.func.isRequired,
+    genres: PropTypes.array.isRequired,
+    setGenres: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired,
+    setTitle: PropTypes.func.isRequired
+  };
+  
 
 export default Filter;

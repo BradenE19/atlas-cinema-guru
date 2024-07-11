@@ -1,5 +1,6 @@
 import './navigation.css';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
@@ -30,6 +31,11 @@ const Header = ({ userUsername, setIsLoggedIn }) => {
                 </div>
         </nav>
     );
+}
+
+Header.propTypes = {
+    userUserName: PropTypes.string.isRequired,
+    setIsLoggedIn: PropTypes.func.isRequired,
 }
 
 export default Header;

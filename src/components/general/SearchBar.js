@@ -1,6 +1,7 @@
 import './general.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const SearchBar = ({ title, setTitle }) => {
     const handleInput = (event) => {
@@ -13,5 +14,11 @@ const SearchBar = ({ title, setTitle }) => {
         </div>
     );
 }
+
+SearchBar.prototype = {
+    title: PropTypes.string.isRequired,
+    setTitle: PropTypes.func.isRequired,
+    icon: PropTypes.element
+  }
 
 export default SearchBar;
